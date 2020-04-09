@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: dotnet-core-sample-web-api
+  name: dotnet-core-sample-web-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnet-core-sample-web-api
+  template:
+    metadata:
+      labels:
+        app: dotnet-core-sample-web-api
+    spec:
+      containers:
+      - image: harbor.derrickwong.hk/apps/dotnet-core-sample-web-api:0.0.1
+        name: dotnet-core-sample-web-api
+        ports:
+        - containerPort: 5000
+        env:
+        - name: PORT
+          value: "5000"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: dotnet-core-sample-web-api
+  name: dotnet-core-sample-web-api
+spec:
+  ports:
+  - port: 5000
+    protocol: TCP
+    targetPort: 5000
+  selector:
+    app: dotnet-core-sample-web-api
+  type: LoadBalancer
