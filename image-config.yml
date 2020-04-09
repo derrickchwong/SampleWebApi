@@ -1,7 +1,6 @@
 #source:
 #  git:
-#    url: https://github.com/derrickchwong/DotNetCoreSampleWebApi
+#    url: https://github.com/derrickchwong/SampleWebApi
 #    revision: master
 image:
-  tag: harbor.derrickwong.hk/apps/dotnet-core-sample-web-api:0.0.1
-
+  tag: <harbor-url>/<repo>/dotnet-core-sample-web-api:0.0.1

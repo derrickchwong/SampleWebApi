@@ -15,7 +15,7 @@ spec:
         app: dotnet-core-sample-web-api
     spec:
       containers:
-      - image: harbor.derrickwong.hk/apps/dotnet-core-sample-web-api:0.0.1
+      - image: <harbor-url>/<repo>/dotnet-core-sample-web-api:0.0.1
         name: dotnet-core-sample-web-api
         ports:
         - containerPort: 5000
