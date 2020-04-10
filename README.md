@@ -186,7 +186,7 @@ NAME                         TYPE           CLUSTER-IP       EXTERNAL-IP    PORT
 dotnet-core-sample-web-api   LoadBalancer   10.100.200.129   34.69.62.134   5000:31602/TCP   52s
 ```
 
-access the app: http://\<externam-ip\>:5000/
+access the app: http://\<external-ip\>:5000/
 
 ## to remove deployment
 
