@@ -5,22 +5,30 @@
 
 1. ensure you have dotnet core installed
 2. docker engine installed
+3. [Tanzu Build Service](https://network.pivotal.io/products/build-service) installed. Documentation [here](https://docs.pivotal.io/build-service/0-1-0/index.html).
 
-The following was tested based on the following on MacOS Mojave 10.14.6 (18G103)
-
-```
-$ dotnet --version
-3.0.100
-```
+The following was tested based on the following on MacOS Catalina 10.15.3
 
 ```
-$ docker -v
-Docker version 19.03.4, build 9013bf5
+⇒  dotnet --version
+3.1.101
+```
+
+```
+⇒  docker -v
+Docker version 19.03.8, build afacb8b
+```
+
+```
+⇒  pb version
+CLI Version: 0.1.0 (e9b0e13a)
 ```
 
 ## update Harbor URL and Repo name
 
 You need a Private Docker Registry and we recommend VMWare Harbor. Replace \<harbor-url\> and \<repo\> in image-config.yml and deploy.yml with your URL and repo name.
+
+
 
 ## build docker image using Tanzu Build Service
 
