@@ -162,7 +162,7 @@ if success, you can check your Harbor repo if the image is pushed.
 ## to test run image
 
 ```
-docker run -e PORT=5000 -p 5000:5000 \<harbor-url\>/\<repo\>/dotnet-core-sample-web-api:0.0.1
+docker run -e PORT=5000 -p 5000:5000 <harbor-url>/<repo>/dotnet-core-sample-web-api:0.0.1
 ```
 
 test it with curl or browser
