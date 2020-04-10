@@ -20,7 +20,7 @@ Docker version 19.03.4, build 9013bf5
 
 ## update Harbor URL and Repo name
 
-You need a Private Docker Registry and we recommend VMWare Harbor. Replace <harbor-url> and <repo> in image-config.yml and deploy.yml with your URL and repo name.
+You need a Private Docker Registry and we recommend VMWare Harbor. Replace \<harbor-url\> and \<repo\> in image-config.yml and deploy.yml with your URL and repo name.
 
 ## build docker image using Tanzu Build Service
 
@@ -154,7 +154,7 @@ if success, you can check your Harbor repo if the image is pushed.
 ## to test run image
 
 ```
-docker run -e PORT=5000 -p 5000:5000 <harbor-url>/<repo>/dotnet-core-sample-web-api:0.0.1
+docker run -e PORT=5000 -p 5000:5000 \<harbor-url\>/\<repo\>/dotnet-core-sample-web-api:0.0.1
 ```
 
 test it with curl or browser
@@ -178,7 +178,7 @@ NAME                         TYPE           CLUSTER-IP       EXTERNAL-IP    PORT
 dotnet-core-sample-web-api   LoadBalancer   10.100.200.129   34.69.62.134   5000:31602/TCP   52s
 ```
 
-access the app: http://<externam-ip>:5000/
+access the app: http://\<externam-ip\>:5000/
 
 ## to remove deployment
 
